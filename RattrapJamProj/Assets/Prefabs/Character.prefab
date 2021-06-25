@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 774562205}
   - component: {fileID: 1376083081}
   m_Layer: 6
-  m_Name: RainBlock
+  m_Name: Umbrella
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4949656266131529054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +214,4 @@ MonoBehaviour:
   MovementSpeed: 5
   JumpForce: 5
   canJump: 0
+  hitBox: {fileID: 0}
