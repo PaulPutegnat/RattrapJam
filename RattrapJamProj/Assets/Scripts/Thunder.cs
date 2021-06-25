@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Thunder : MonoBehaviour
 {
-    public CharacterController character;
+    public PlayerController player;
     public GameObject[] thunderList;
 
     void Start()
@@ -13,13 +13,13 @@ public class Thunder : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
         Touched();
     }
 
     void Touched()
     {
-        if (thunderList[0].GetComponent<BoxCollider2D>().IsTouching(character.hitBox))
+        if (thunderList[0].GetComponent<BoxCollider2D>().IsTouching(player.hitBox))
         {
             Debug.Log("touched!");
         }

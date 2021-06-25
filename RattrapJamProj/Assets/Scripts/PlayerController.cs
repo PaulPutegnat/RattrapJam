@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private bool invincible;
 
     private Rigidbody2D rigidBody;
+    public BoxCollider2D hitBox;
     private SpriteRenderer rend;
     private Shader shaderGUItext;
     private Shader shaderDefault;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
+        hitBox = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
 
         shaderGUItext = Shader.Find("GUI/Text Shader");
