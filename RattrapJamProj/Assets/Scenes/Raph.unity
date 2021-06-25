@@ -1359,7 +1359,7 @@ RectTransform:
   - {fileID: 125405792}
   - {fileID: 436879147}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1430,7 +1430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903437272
 GameObject:
@@ -4702,7 +4702,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   SizeBySpeedModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -5264,7 +5264,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 60
+    minKillSpeed: 100
     maxKillSpeed: 10000
     radiusScale: 0.1
     collidesWith:
@@ -7730,8 +7730,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.35
-      minScalar: 0.1
+      scalar: 0.275
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7782,9 +7782,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 5
+      minMaxState: 3
+      scalar: 0.5
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -12467,7 +12467,7 @@ Transform:
   - {fileID: 664879746}
   - {fileID: 912457059}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627049526
 GameObject:
@@ -13091,6 +13091,7 @@ MonoBehaviour:
   Thunder: {fileID: 3102111420446959781, guid: f175d8c4c0f50694a87db82de233087c, type: 3}
   Warning: {fileID: 8810069364999516406, guid: 26ebbca49027758429b44d3b40da7a7b, type: 3}
   rand: 0
+  blink: 0
 --- !u!4 &1880918485
 Transform:
   m_ObjectHideFlags: 0
@@ -13103,7 +13104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1895026153
 PrefabInstance:
@@ -13252,7 +13253,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0ed58179f11bbf9499509db2d3ac7b54, type: 3}
-  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13274,7 +13275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1928844879
 PrefabInstance:
