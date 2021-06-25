@@ -15,10 +15,7 @@ public class Timer : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            Time.timeScale = 3;
-        }
+
         if (stop)
             return;
         float t = Time.time - startTime;
