@@ -7,8 +7,10 @@ public class CharacterController : MonoBehaviour
     public bool canJump = false;
 
     private Rigidbody2D rigidBody;
+    public BoxCollider2D hitBox;
     void Start()
     {
+        hitBox = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
