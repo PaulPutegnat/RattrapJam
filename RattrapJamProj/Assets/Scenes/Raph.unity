@@ -13134,32 +13134,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1776922794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4949656266131529053, guid: c2ab600595093b5499202de804530825,
-    type: 3}
-  m_PrefabInstance: {fileID: 1928844879}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1776922796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776922794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284a35e1bf68aa045ac395003046a18a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameoverTimerText: {fileID: 180693262}
-  timerText: {fileID: 1562903983}
---- !u!212 &1776922800 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4949656266131529041, guid: c2ab600595093b5499202de804530825,
-    type: 3}
-  m_PrefabInstance: {fileID: 1928844879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1789870289
 GameObject:
   m_ObjectHideFlags: 0
@@ -13498,10 +13472,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 774562204, guid: c2ab600595093b5499202de804530825, type: 3}
-      propertyPath: m_Name
-      value: Umbrella
-      objectReference: {fileID: 0}
+    - target: {fileID: 1776922796, guid: c2ab600595093b5499202de804530825, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1562903983}
+    - target: {fileID: 1776922796, guid: c2ab600595093b5499202de804530825, type: 3}
+      propertyPath: gameoverTimerText
+      value: 
+      objectReference: {fileID: 180693262}
     - target: {fileID: 4949656266131529042, guid: c2ab600595093b5499202de804530825,
         type: 3}
       propertyPath: m_RootOrder
@@ -13564,19 +13542,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949656266131529054, guid: c2ab600595093b5499202de804530825,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1776922794}
-    - target: {fileID: 4949656266131529054, guid: c2ab600595093b5499202de804530825,
-        type: 3}
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 436879146}
-    - target: {fileID: 4949656266131529054, guid: c2ab600595093b5499202de804530825,
-        type: 3}
-      propertyPath: playerSprite
-      value: 
-      objectReference: {fileID: 1776922800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2ab600595093b5499202de804530825, type: 3}
 --- !u!1001 &1975688500

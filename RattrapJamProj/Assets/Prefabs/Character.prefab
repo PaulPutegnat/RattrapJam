@@ -216,6 +216,9 @@ MonoBehaviour:
   JumpForce: 5
   canJump: 0
   hitBox: {fileID: 0}
+  gameOver: {fileID: 0}
+  player: {fileID: 4949656266131529053}
+  playerSprite: {fileID: 4949656266131529041}
 --- !u!114 &1776922796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,4 +231,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284a35e1bf68aa045ac395003046a18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameoverTimerText: {fileID: 0}
   timerText: {fileID: 0}
