@@ -14,13 +14,17 @@ public class Timer : MonoBehaviour
     }
 
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Time.timeScale = 3;
+        }
         if (stop)
             return;
         float t = Time.time - startTime;
 
         string minutesStr = ((int) t / 60).ToString();
-        string secondsStr = (t % 60).ToString("f0");
-        float seconds = (t % 60);
+        string secondsStr = ((int)(t % 60)).ToString("00");
+        float seconds = (int)(t % 60);
 
         timerText.text = minutesStr + ":" + secondsStr;
     }
