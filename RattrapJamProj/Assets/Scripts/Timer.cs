@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    public Text gameoverTimerText;
     public Text timerText;
     private float startTime;
     private bool stop = false;
@@ -27,6 +28,7 @@ public class Timer : MonoBehaviour
         float seconds = (int)(t % 60);
 
         timerText.text = minutesStr + ":" + secondsStr;
+        gameoverTimerText.text = minutesStr + ":" + secondsStr;
     }
 
     public void StopTimer()

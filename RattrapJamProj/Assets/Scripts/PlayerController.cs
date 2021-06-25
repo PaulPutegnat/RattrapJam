@@ -8,14 +8,19 @@ public class PlayerController : MonoBehaviour
     public bool canJump = false;
     private bool invincible;
 
+    private Timer timer;
     private Rigidbody2D rigidBody;
     public BoxCollider2D hitBox;
+    public GameObject gameOver;
+    public GameObject player;
+    public SpriteRenderer playerSprite;
     private SpriteRenderer rend;
     private Shader shaderGUItext;
     private Shader shaderDefault;
 
     void Start()
     {
+        timer = GetComponent<Timer>();
         rend = GetComponent<SpriteRenderer>();
         hitBox = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
@@ -25,19 +30,26 @@ public class PlayerController : MonoBehaviour
 
         blink = 50;
         invincible = false;
+
+        gameOver.SetActive(false);
     }
 
     void Update()
     {
-        var movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        if (!invincible)
+        {
+            var movement = Input.GetAxis("Horizontal");
+            transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
-        if (!Mathf.Approximately(0, movement)) {
-            transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
-        }
+            if (!Mathf.Approximately(0, movement))
+            {
+                transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+            }
 
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidBody.velocity.y) < 0.001f && canJump) {
-            rigidBody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidBody.velocity.y) < 0.001f && canJump)
+            {
+                rigidBody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            }
         }
     }
 
@@ -45,6 +57,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Thunder") && !invincible)
         {
+            timer.StopTimer();
+            gameOver.SetActive(true);
             invincible = true;
             InvokeRepeating("BlinkingAnim", .01f, .04f);
         }
@@ -58,6 +72,8 @@ public class PlayerController : MonoBehaviour
             CancelInvoke("BlinkingAnim");
             rend.material.shader = shaderDefault;
             invincible = false;
+            Destroy(player);
+            Destroy(playerSprite);
             return;
         }
         //Switch between two shaders to make blinking anim
@@ -73,6 +89,5 @@ public class PlayerController : MonoBehaviour
             rend.material.shader = shaderDefault;
             return;
         }
-
     }
 }
