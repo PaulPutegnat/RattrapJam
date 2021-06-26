@@ -8,7 +8,7 @@ public class ThunderGenerator : MonoBehaviour
     [SerializeField] private GameObject Thunder;
     [SerializeField] private GameObject Warning;
     private Transform generator;
-    private SpriteRenderer background;
+    private Light backLight;
     private Shader shaderGUItext;
     private Shader shaderDefault;
     public int rand = 0;
@@ -17,7 +17,7 @@ public class ThunderGenerator : MonoBehaviour
     void Start()
     {
         generator = GameObject.Find("Thunder Generator").transform;
-        background = GameObject.Find("Background").GetComponent<SpriteRenderer>();
+        backLight = GameObject.Find("Light").GetComponent<Light>();
         shaderGUItext = Shader.Find("GUI/Text Shader");
         shaderDefault = Shader.Find("Sprites/Default");
         blink = 6;
@@ -45,7 +45,7 @@ public class ThunderGenerator : MonoBehaviour
 
                 case 1:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(-8, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(-8, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-8, 6.5f), new Quaternion(), generator), 1);
 
@@ -53,56 +53,56 @@ public class ThunderGenerator : MonoBehaviour
 
                 case 2:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(-6, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(-6, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-6, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 3:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(-4, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(-4, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-4, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 4:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(-2, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(-2, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-2, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 5:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(0, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(0, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(0, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 6:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(2, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(2, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(2, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 7:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(4, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(4, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(4, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 8:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(6, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(6, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(6, 6.5f), new Quaternion(), generator), 1);
                     break;
 
                 case 9:
                     rand = 0;
-                    Instantiate(Warning, new Vector2(8, 4), new Quaternion());
+                    Instantiate(Warning, new Vector3(8, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(8, 6.5f), new Quaternion(), generator), 1);
                     break;
@@ -123,20 +123,20 @@ public class ThunderGenerator : MonoBehaviour
         {
             blink = 6;
             CancelInvoke("BlinkingAnim");
-            background.material.shader = shaderDefault;
+            backLight.intensity = 0;
             return;
         }
         //Switch between two shaders to make blinking anim
-        if (background.material.shader == shaderDefault)
+        if (backLight.intensity == 0)
         {
             blink--;
-            background.material.shader = shaderGUItext;
+            backLight.intensity = 10;
             return;
         }
         else
         {
             blink--;
-            background.material.shader = shaderDefault;
+            backLight.intensity = 0;
             return;
         }
 
