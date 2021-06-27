@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer rend;
     private Shader shaderGUItext;
     private Shader shaderDefault;
+    private Animator animator;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         hitBox = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         shaderGUItext = Shader.Find("GUI/Text Shader");
         shaderDefault = Shader.Find("Sprites/Default");
@@ -38,7 +40,11 @@ public class PlayerController : MonoBehaviour
     {
         if (!invincible)
         {
-            var movement = Input.GetAxis("Horizontal");
+            float movement = Input.GetAxis("Horizontal");
+            Debug.Log(movement.ToString());
+            if (movement < -0.1f || movement > 0.1f) { animator.SetBool("Movement", true); }
+            else { animator.SetBool("Movement", false); }
+
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
             if (!Mathf.Approximately(0, movement))

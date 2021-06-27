@@ -123,7 +123,7 @@ public class ThunderGenerator : MonoBehaviour
         {
             blink = 6;
             CancelInvoke("BlinkingAnim");
-            backLight.intensity = 0;
+            backLight.intensity = .5f;
             return;
         }
         //Switch between two shaders to make blinking anim

@@ -56,16 +56,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.147639, y: -0.5591619}
-      - {x: 1.9427972, y: -0.0792568}
-      - {x: 1.5344203, y: 0.26345986}
-      - {x: 0.89787203, y: 0.51661307}
-      - {x: 0.16319197, y: 0.6159544}
-      - {x: -0.1481026, y: 0.6190463}
-      - {x: -0.7332256, y: 0.51788175}
-      - {x: -1.3887627, y: 0.24335296}
-      - {x: -1.7567949, y: -0.09277924}
-      - {x: -1.860634, y: -0.4449508}
+    - - {x: 2.0280545, y: -1.3563931}
+      - {x: 1.7434893, y: -0.58416986}
+      - {x: 1.1889535, y: -0.09529412}
+      - {x: 0.645416, y: 0.0914232}
+      - {x: 0.030320201, y: 0.097754076}
+      - {x: -0.37398458, y: -0.0054512024}
+      - {x: -0.6535024, y: -0.15976459}
+      - {x: -0.9237113, y: -0.40771914}
+      - {x: -1.1322981, y: -0.67741543}
+      - {x: -1.2892853, y: -1.3219047}
 --- !u!1 &4949656266131529053
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 4949656266131529055}
   - component: {fileID: 4949656266131529054}
   - component: {fileID: 1776922796}
+  - component: {fileID: 39484888}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -141,8 +142,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1bd82b3f672db9644bb0dd0e5c364dca, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 6337079503296621624, guid: 296b85960ce177a41a04ab5171306f13,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,18 +168,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16377282, y: -1.063556}
+  m_Offset: {x: 0.2700704, y: -1.1632097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9, y: 9}
+    oldSize: {x: 4.2, y: 9}
     newSize: {x: 9, y: 9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.378428, y: 6.6711707}
+  m_Size: {x: 2.0595345, y: 6.179545}
   m_EdgeRadius: 0
 --- !u!50 &4949656266131529055
 Rigidbody2D:
@@ -233,3 +235,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameoverTimerText: {fileID: 0}
   timerText: {fileID: 0}
+--- !u!95 &39484888
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949656266131529053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b89fbcf25832ec4580ef7be7f72e7d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

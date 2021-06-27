@@ -1985,11 +1985,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1152935227405234782, guid: adc15940910018b4386bbf0ae99f1d47,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1152935227882050130, guid: adc15940910018b4386bbf0ae99f1d47,
         type: 3}
       propertyPath: m_RootOrder
@@ -2050,26 +2045,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud System
       objectReference: {fileID: 0}
-    - target: {fileID: 1152935227990383378, guid: adc15940910018b4386bbf0ae99f1d47,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1152935228302827416, guid: adc15940910018b4386bbf0ae99f1d47,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1152935228443821043, guid: adc15940910018b4386bbf0ae99f1d47,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1152935228486926574, guid: adc15940910018b4386bbf0ae99f1d47,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc15940910018b4386bbf0ae99f1d47, type: 3}
 --- !u!1001 &7018143233000422982
@@ -2087,12 +2062,12 @@ PrefabInstance:
     - target: {fileID: 7018143233762747968, guid: 14a168fcdd90d904cb19bb1c561617e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 7018143233762747968, guid: 14a168fcdd90d904cb19bb1c561617e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7018143233762747968, guid: 14a168fcdd90d904cb19bb1c561617e8,
         type: 3}
