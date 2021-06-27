@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
 
     private Timer timer;
     private Rigidbody2D rigidBody;
-    public BoxCollider2D hitBox;
     public GameObject gameOver;
     public GameObject player;
     public SpriteRenderer playerSprite;
@@ -26,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
         timer = GetComponent<Timer>();
         rend = GetComponent<SpriteRenderer>();
-        hitBox = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
@@ -44,7 +42,6 @@ public class PlayerController : MonoBehaviour
         if (!invincible)
         {
             float movement = Input.GetAxis("Horizontal");
-            Debug.Log(movement.ToString());
             if (movement < -0.1f || movement > 0.1f) { 
                 animator.SetBool("Movement", true); 
                 isMoving = false;
