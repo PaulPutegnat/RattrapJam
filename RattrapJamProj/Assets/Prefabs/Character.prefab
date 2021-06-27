@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 4949656266131529054}
   - component: {fileID: 1776922796}
   - component: {fileID: 39484888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2700704, y: -1.1632097}
+  m_Offset: {x: 0.27007043, y: -1.1914079}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -179,7 +179,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0595345, y: 6.179545}
+  m_Size: {x: 2.0595345, y: 6.2359414}
   m_EdgeRadius: 0
 --- !u!50 &4949656266131529055
 Rigidbody2D:
@@ -217,7 +217,6 @@ MonoBehaviour:
   MovementSpeed: 5
   JumpForce: 5
   canJump: 0
-  hitBox: {fileID: 0}
   gameOver: {fileID: 0}
   player: {fileID: 4949656266131529053}
   playerSprite: {fileID: 4949656266131529041}
@@ -235,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameoverTimerText: {fileID: 0}
   timerText: {fileID: 0}
+  seconds: 0
 --- !u!95 &39484888
 Animator:
   serializedVersion: 3

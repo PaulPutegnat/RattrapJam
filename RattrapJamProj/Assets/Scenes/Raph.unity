@@ -1538,21 +1538,6 @@ PrefabInstance:
       propertyPath: gameoverTimerText
       value: 
       objectReference: {fileID: 180693262}
-    - target: {fileID: 4949656266131529040, guid: c2ab600595093b5499202de804530825,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 6.2359414
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949656266131529040, guid: c2ab600595093b5499202de804530825,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.27007043
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949656266131529040, guid: c2ab600595093b5499202de804530825,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -1.1914079
-      objectReference: {fileID: 0}
     - target: {fileID: 4949656266131529042, guid: c2ab600595093b5499202de804530825,
         type: 3}
       propertyPath: m_RootOrder
