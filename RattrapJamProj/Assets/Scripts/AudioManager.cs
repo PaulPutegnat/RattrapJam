@@ -48,7 +48,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void Mute(string name, bool mute)
+    public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
@@ -56,13 +56,6 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Sound " + name + " not found!");
             return;
         }
-
-        if (mute) {
-            s.source.volume = 0;
-        }
-
-        else  {
-            s.source.volume = s.volume;
-        }
+        s.source.Pause();
     }
 }

@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     public Text gameoverTimerText;
     public Text timerText;
+    public float seconds;
     private float startTime;
     private bool stop = false;
 
@@ -22,7 +23,7 @@ public class Timer : MonoBehaviour
 
         string minutesStr = ((int) t / 60).ToString();
         string secondsStr = ((int)(t % 60)).ToString("00");
-        float seconds = (int)(t % 60);
+        seconds = (int)(t % 60);
 
         timerText.text = minutesStr + ":" + secondsStr;
         gameoverTimerText.text = minutesStr + ":" + secondsStr;
