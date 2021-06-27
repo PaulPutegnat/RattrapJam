@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float JumpForce = 1;
     public bool canJump = false;
     private bool invincible;
+    private bool isMoving = false;
 
     private Timer timer;
     private Rigidbody2D rigidBody;
@@ -21,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Mute("Mud", false);
+
         timer = GetComponent<Timer>();
         rend = GetComponent<SpriteRenderer>();
         hitBox = GetComponent<BoxCollider2D>();
@@ -42,8 +45,14 @@ public class PlayerController : MonoBehaviour
         {
             float movement = Input.GetAxis("Horizontal");
             Debug.Log(movement.ToString());
-            if (movement < -0.1f || movement > 0.1f) { animator.SetBool("Movement", true); }
-            else { animator.SetBool("Movement", false); }
+            if (movement < -0.1f || movement > 0.1f) { 
+                animator.SetBool("Movement", true); 
+                isMoving = false;
+            }
+            else { 
+                animator.SetBool("Movement", false);
+                isMoving = true;
+            }
 
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
@@ -56,6 +65,10 @@ public class PlayerController : MonoBehaviour
             {
                 rigidBody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             }
+
+            if (isMoving) {
+                FindObjectOfType<AudioManager>().Play("Mud");
+            }
         }
     }
 
@@ -63,6 +76,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Thunder") && !invincible)
         {
+            FindObjectOfType<AudioManager>().Mute("Mud", true);
+            FindObjectOfType<AudioManager>().Play("Zapped");
             timer.StopTimer();
             gameOver.SetActive(true);
             invincible = true;

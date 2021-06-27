@@ -8,6 +8,7 @@ public class Warning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Warning");
         rend = GetComponent<SpriteRenderer>();
         Destroy(gameObject, 2);
         InvokeRepeating("Anim", 0.1f, 0.3f);
@@ -16,5 +17,8 @@ public class Warning : MonoBehaviour
     private void Anim()
     {
         rend.enabled = !rend.enabled;
+        if (rend.enabled) {
+            FindObjectOfType<AudioManager>().Play("Warning");
+        }
     }
 }

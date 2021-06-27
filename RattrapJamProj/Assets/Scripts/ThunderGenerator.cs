@@ -48,6 +48,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(-8, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-8, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
 
                     break;
 
@@ -56,6 +57,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(-6, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-6, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 3:
@@ -63,6 +65,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(-4, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-4, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 4:
@@ -70,6 +73,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(-2, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(-2, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 5:
@@ -77,6 +81,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(0, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(0, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 6:
@@ -84,6 +89,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(2, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(2, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 7:
@@ -91,6 +97,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(4, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(4, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 8:
@@ -98,6 +105,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(6, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(6, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 case 9:
@@ -105,6 +113,7 @@ public class ThunderGenerator : MonoBehaviour
                     Instantiate(Warning, new Vector3(8, 4, -2), new Quaternion());
                     yield return new WaitForSeconds(2);
                     Destroy(Instantiate(Thunder, new Vector2(8, 6.5f), new Quaternion(), generator), 1);
+                    FindObjectOfType<AudioManager>().Play("Thunder");
                     break;
 
                 default:
